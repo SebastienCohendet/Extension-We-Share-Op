@@ -26,12 +26,11 @@
 				delete _el.dataset['i18n'+_v[2]];
 			});
 		});
-
+		
 		//_gEBI("wso-feedback").href = "mailto:"+"8holon"+"@"+"gmail.com?Subject=Feedback";
 		//_gEBI("wso-feedback").innerHTML = "8holon"+"&#64;"+"gmail.com";
 		_gEBI("wso-feedback").href = "mailto:"+"alexandre.remy.contact"+"@"+"gmail.com?Subject=Feedback";
 		_gEBI("wso-feedback").innerHTML = "alexandre.remy.contact"+"&#64;"+"gmail.com";
-
 		_gEBI("wso-version").innerHTML = this.version;
 	};
 
@@ -46,9 +45,9 @@
 					.format('LLLL')
 				+')';
 			_gEBI('wso-sharesValue').value = this.financeData.value.toFixed(2)+'€';
-			_gEBI('wso-investmentValue').value = (this.userData["ws2016"].investmentValue+this.userData["ws2017"].investmentValue).toFixed(2)+'€';
-			_gEBI('wso-capitalGain').value = (this.userData["ws2016"].capitalGain+this.userData["ws2017"].capitalGain).toFixed(2)+'€';
-			_gEBI('wso-overallGain').value = (this.userData["ws2016"].overallGain+this.userData["ws2017"].overallGain).toFixed(2)+'€';
+			_gEBI('wso-investmentValue').value = (this.userData["ws2016"].investmentValue+this.userData["ws2017"].investmentValue+this.userData["ws2018"].investmentValue).toFixed(2)+'€';
+			_gEBI('wso-capitalGain').value = (this.userData["ws2016"].capitalGain+this.userData["ws2017"].capitalGain).toFixed(2)+this.userData["ws2018"].capitalGain).toFixed(2)+'€';
+			_gEBI('wso-overallGain').value = (this.userData["ws2016"].overallGain+this.userData["ws2017"].overallGain).toFixed(2)+overallGain+this.userData["ws2018"].overallGain).toFixed(2)+'€';
 		}
 
         _gEBI("wso-operationYear").value=this.operationYear;
@@ -70,10 +69,10 @@
 	};
 
 	WeShareOp.prototype.displayBadgeText = function(){
-		var _gain = this.userData["ws2016"].capitalGain+this.userData["ws2017"].capitalGain;
+		var _gain = this.userData["ws2016"].capitalGain+this.userData["ws2017"].capitalGain+this.userData["ws2018"].capitalGain;
 
 		if( this.userData.options.showOverallGainOnBadge === true ){
-			_gain = this.userData["ws2016"].overallGain+this.userData["ws2017"].overallGain;
+			_gain = this.userData["ws2016"].overallGain+this.userData["ws2017"].overallGain+this.userData["ws2018"].overallGain;
 		}
 
 		var _sign = '-';

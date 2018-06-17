@@ -1,6 +1,6 @@
 {
   "name": "extension-we-share-op",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "Chrome Extension to track the capital gain of the shares within the \"We Share\" operation",
   "main": "index.js",
   "directories": {
@@ -25,11 +25,11 @@
   "scripts": {
     "gulp": "gulp"
   },
-  "author": "8HoLoN <8holon@gmail.com>",
+  "author": "8HoLoN <8holon@gmail.com> + SCohendet",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/8HoLoN/Extension-We-Share-Op.git"
+    "url": "git+https://github.com/SebastienCohendet/Extension-We-Share-Op.git"
   },
   "keywords": [
     "Chrome",
@@ -37,7 +37,7 @@
     "We Share"
   ],
   "bugs": {
-    "url": "https://github.com/8HoLoN/Extension-We-Share-Op/issues"
+    "url": "https://github.com/SebastienCohendet/Extension-We-Share-Op/issues"
   },
-  "homepage": "https://github.com/8HoLoN/Extension-We-Share-Op#readme"
+  "homepage": "https://github.com/SebastienCohendet/Extension-We-Share-Op#readme"
 }

@@ -46,6 +46,16 @@
                 capitalGain: null,
                 overallGain: null
             },
+            ws2018 : {
+                numberMaxOfAvailableShares:10,
+                buyingPrice: 164.43,
+                numberOfSharesPurchased: 0,
+                numberOfSharesAcquired: null,
+                amountOfInvestment: null,
+                investmentValue: null,
+                capitalGain: null,
+                overallGain: null
+            },
 			options:{
 				showOverallGainOnBadge: false
 			},
@@ -107,6 +117,7 @@
 				this.saveData();
 				this.computeData("ws"+2016);
                 this.computeData("ws"+2017);
+                this.computeData("ws"+2018);
 				this.updateFinanceData();
 			});
 		});
@@ -124,6 +135,7 @@
 		var _userData = JSON.parse(sjcl.decrypt("wso"+chrome.runtime.id,_items.wsoUserData));
 		this.userData.ws2016.numberOfSharesPurchased = _userData.ws2016.numberOfSharesPurchased;
         this.userData.ws2017.numberOfSharesPurchased = _userData.ws2017.numberOfSharesPurchased;
+        this.userData.ws2018.numberOfSharesPurchased = _userData.ws2018.numberOfSharesPurchased;
 		this.userData.amundiAccount.login = _userData.amundiAccount.login;
 		this.userData.amundiAccount.pwd = _userData.amundiAccount.pwd;
 		this.userData.options.showOverallGainOnBadge = _userData.options.showOverallGainOnBadge;
@@ -354,6 +366,7 @@
 
 			this.computeData("ws"+2016);
             this.computeData("ws"+2017);
+            this.computeData("ws"+2018);
 			this.displayBadgeText();
 			if( this._window!==null ){
 				this.displayData(this._window);
